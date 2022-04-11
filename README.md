@@ -14,9 +14,9 @@ Voir le status de git
 ```
 git status
 ```
--Ajouter un fichier dans .git
+-Ajouter une modification dans .git
 ```
-git add 'nom du fichier'
+git add .
 ```
 -Ajouter une description
 ```
