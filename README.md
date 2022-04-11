@@ -3,6 +3,7 @@
 <h1>Commandes</h1> 
 
 <h2>Installer le projet sur votre PC avec:</h2>
+
 ```
 git clone https://github.com/Caltus124/django_profil_app.git
 ```
