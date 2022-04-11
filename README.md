@@ -9,9 +9,10 @@ Les collaborateurs du projet sont: William, Arthur, Matteo et Enzo.
 
 ```
 git clone https://github.com/Caltus124/django_profil_app.git
-```
-
+cd django_profil_app
 pip install -r requirements.txt
+python3 manage.py runserver 0.0.0.0:8000
+```
 
 <h2>Commandes Git HUB pour les développeurs:</h2>
 
@@ -38,11 +39,4 @@ git commit -m 'la description'
 git push
 ```
 
-
-<h2>Command Django:</h2>
-
--run server
-```
-python3 manage.py runserver 0.0.0.0:8000
-```
 
