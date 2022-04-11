@@ -1,6 +1,6 @@
 # django_profil_app
 
-<h1>Commande</h1> 
+<h1>Commandes</h1> 
 
 Cloner le projet sur votre PC avec:
 ```
