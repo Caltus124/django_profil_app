@@ -9,3 +9,5 @@ urlpatterns = [
     path('login/', views.login),
     path('register/', views.register)
 ]
+
+#handler404 = "views.404.html"

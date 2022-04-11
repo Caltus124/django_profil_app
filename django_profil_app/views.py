@@ -1,6 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
+def error(request, exception):
+    return render(request, '404.html')
+
 def home(request):
     return render(request, 'home.html')
 
