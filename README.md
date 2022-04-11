@@ -7,7 +7,7 @@ Cloner le projet sur votre PC avec:
 git clone https://github.com/Caltus124/django_profil_app.git
 ```
 
-Commande GitHUB pour les développeurs:
+<h2>Commande GitHUB pour les développeurs:</h2>
 
 Voir le status de git
 ```
@@ -26,7 +26,7 @@ git commit -m 'la description'
 git push
 ```
 
-Command Django:
+<h2>Command Django:</h2>
 
 -run server
 ```
