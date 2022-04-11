@@ -8,7 +8,7 @@
 git clone https://github.com/Caltus124/django_profil_app.git
 ```
 
-<h2>Commande GitHUB pour les développeurs:</h2>
+<h2>Commandes Git HUB pour les développeurs:</h2>
 
 Voir le status de git
 ```
