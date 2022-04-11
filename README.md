@@ -11,6 +11,8 @@ Les collaborateurs du projet sont: William, Arthur, Matteo et Enzo.
 git clone https://github.com/Caltus124/django_profil_app.git
 ```
 
+pip install -r requirements.txt
+
 <h2>Commandes Git HUB pour les développeurs:</h2>
 
 -Faire la mise à jour
