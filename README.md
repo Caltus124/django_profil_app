@@ -13,6 +13,12 @@ git clone https://github.com/Caltus124/django_profil_app.git
 
 <h2>Commandes Git HUB pour les développeurs:</h2>
 
+-Faire la mise à jour
+
+```
+git pull
+```
+
 Voir le status de git
 ```
 git status
@@ -29,11 +35,7 @@ git commit -m 'la description'
 ```
 git push
 ```
--Faire la mise à jour
 
-```
-git pull
-```
 
 <h2>Command Django:</h2>
 
