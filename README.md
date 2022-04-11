@@ -26,6 +26,11 @@ git commit -m 'la description'
 ```
 git push
 ```
+-Faire la mise à jour
+
+```
+git pull
+```
 
 <h2>Command Django:</h2>
 
