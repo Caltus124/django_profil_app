@@ -1,5 +1,8 @@
 # django_profil_app
 
+Cette application est créée avec le freamwork <strong>Django</strong> et elle contient une base de données SQLite.
+Les collaborateurs du projet sont: William, Arthur, Matteo et Enzo.  
+
 <h1>Commandes</h1> 
 
 <h2>Installer le projet sur votre PC avec:</h2>
