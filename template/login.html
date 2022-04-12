@@ -17,35 +17,19 @@
         <div id="title">
             <i class="material-icons lock">lock</i> Login
         </div>
-
-        <form>
+        {% block content %}
+        <form method="post" action="/login/">
             <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">face</i>
-                </div>
-                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
-            </div>
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div><br>
 
             <div class="clearfix"></div>
 
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">vpn_key</i>
-                </div>
-                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
-            </div>
-
-            <div class="remember-me">
-                <input type="checkbox">
-                <span style="color: #DDD">Remember Me</span>
-            </div>
-
             <input type="submit" value="Log In" />
         </form>
+        {% endblock %}
 
-        <div class="forgot-password">
-            <a href="#">Forgot your password?</a>
-        </div>
         <div class="privacy">
             <a href="#">Privacy Policy</a>
         </div>
@@ -57,14 +41,6 @@
     </div>
 
 
-{% block content %}
-  <h2>Sign up</h2>
-  <form method="post" action="/login/">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit" value="Login">Log in</button>
-  </form>
-{% endblock %}
 
 </body>
 </html>
