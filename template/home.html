@@ -14,9 +14,38 @@
             color: #F2F2F2;
             background-color: #303641;
         }
+        #home_first_div{
+            width: 60%;
+            height: 50vh;
+            margin: auto;
+            margin-top: 25vh;
+            background-color: #1D1F20;
+            border-radius: 0.35em;
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+        #home_first_div h1{
+            text-align: center;
+            font-size: 4em;
+        }
+        #home_first_div a{
+            border: 2px solid white;
+            padding: 10px 50px 10px 50px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        #home_sec_div{
+            display: flex;
+            justify-content: space-evenly;
+        }
         </style>
-        <h1>HELLO WORLD!</h1>
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
+        <div id="home_first_div">
+            <h1>BIENVENU SUR PROFIL</h1>
+            <div id="home_sec_div">
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </div>
+        </div>
     </body>
 </html>
