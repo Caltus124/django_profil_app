@@ -1,20 +1,6 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
-
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
-
-def error(request, exception):
-    return render(request, '404.html')
-
-
-def login(request):
-    if request.method == 'POST':
-        form = AuthenticationForm()
-    else:
-        form = AuthenticationForm()
-    return render(request, 'login.html')
 
 
 def register(request):
@@ -27,3 +13,14 @@ def register(request):
     else:
         form = UserCreationForm(request.POST)
     return render(request, 'register.html', {'form': form})
+
+
+def login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            #log in user
+            return redirect('/register')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form': form})

@@ -55,5 +55,16 @@
             <a href="/register"><button id="register-link">Register here</button></a>
         </div>
     </div>
+
+
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post" action="/login/">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" value="Login">Log in</button>
+  </form>
+{% endblock %}
+
 </body>
 </html>
