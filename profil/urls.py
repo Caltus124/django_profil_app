@@ -6,6 +6,6 @@ app_name = 'profil'
 urlpatterns = [
     path('', views.index, name='index'),
     path('select', views.select, name='selection'),
-    path('detail', views.detail, name='detail')
+    path('int:student_id', views.detail, name='detail')
 
 ]
