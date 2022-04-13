@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 </head>
 <body>
-    <h1 style="text-align: center; margin-top: 80px; margin-bottom: 50px;">BIENVENU SUR PROFIL</h1>
+    <h1 style="text-align: center; margin-top: 80px; margin-bottom: 50px;"><span class="element"></span></h1>
     <div id="container-login">
         <div id="title">
             <i class="material-icons lock">lock</i> Login
@@ -35,8 +36,15 @@
         </div>
 
     </div>
-
-
+<script src="typed.js"></script>
+<script>
+var typed = new Typed('.element', {
+  strings: ['BIENVENUE SUR PROFIL',"L'APPLICATION DE GESTION DE PROFIL"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true
+});
+</script>
 
 </body>
 </html>
