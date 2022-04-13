@@ -20,8 +20,11 @@ def login(request):
         if form.is_valid():
             #log in user
             user = form.get_user()
+            if user == 'admin':
             #login(request, user)
-            return redirect('../profil')
+                return redirect('../profil')
+            else:
+                return redirect('../profil/select')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
