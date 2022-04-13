@@ -21,7 +21,7 @@ def login(request):
             #log in user
             user = form.get_user()
             #login(request, user)
-            return redirect('/home')
+            return redirect('../profil')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
