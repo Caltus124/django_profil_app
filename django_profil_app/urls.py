@@ -12,4 +12,3 @@ urlpatterns = [
     path('politique/', views.politique),
     path('logout/', views.logout)
 ]
-
