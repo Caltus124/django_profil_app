@@ -7,6 +7,42 @@
     <title>Selection de profil</title>
 </head>
 <body>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    color: #F2F2F2;
+    background-color: #303641;
+}
+
+header{
+    height: 15vh;
+    width: 100%;
+    background-color: #1D1F20;
+    display: flex;
+    align-items: center;
+}
+header a{
+    color: white;
+    border: 2px solid white;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    margin-left: 50px;
+}
+</style>
+
+<header>
+    <div>
+        <a href="/login">Log out</a>    
+    </div>
+</header>
+<p>Student panel</p>
     {% if student_list %}
         <ul>
         {% for Student in student_list %}

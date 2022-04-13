@@ -38,9 +38,10 @@ header a{
 
 <header>
 	<div>
-		<a href="/login">Log out</a>		
+		<a href="/login">Log out</a>	
 	</div>
 </header>
+<p>Admin panel</p>
 {% if user.is_authenticated %}
 <p>{{ user }}</p>
 {% endif %}
