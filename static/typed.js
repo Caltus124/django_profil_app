@@ -4,3 +4,10 @@ var typed = new Typed('.element', {
   backSpeed: 60,
   loop: true
 });
+
+var typed = new Typed('.element2', {
+  strings: ["This page doesn't exist."],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true
+});

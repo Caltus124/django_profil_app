@@ -4,6 +4,7 @@ from django.template import loader
 
 from .models import Student
 # Create your views here.
+
 def index(render):
     return HttpResponse("Ici Futur CRUD")
 
@@ -23,3 +24,4 @@ def detail(request, student_id):
         'lastname': this_student.student_lastname,
     }
     return HttpResponse(template.render(context, request))
+

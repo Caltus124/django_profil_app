@@ -3,10 +3,51 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 	<title>404</title>
 </head>
 <body>
-<h1>404</h1>
-<p>Not found.</p>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Raleway');
+	*{
+		margin: 0;
+	    padding: 0;
+	}
+	body {
+	    font-family: 'Raleway', sans-serif;
+	    color: #F2F2F2;
+	    background-color: #303641;
+	}
+	.page_404{
+		width: 80%;
+		height: 50vh;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 25vh;
+		border: 2px solid white;
+		text-align: center;
+	}
+	.page_404 h1{
+		text-align: center;
+		font-size: 5em;
+		padding: 40px;
+	}
+	.page_404 p{
+		text-align: center;
+		font-size: 3em;
+		margin-bottom: 40px;
+	}
+	.page_404 a{
+		text-decoration: none;
+		font-size: 2em;
+		color: white;
+	}
+</style>
+<section class="page_404">
+	<h1>404 error</h1>
+	<p>This page doesn't exist.</p>
+	<a href="/login/">Clic here for back</a>
+</section>
 </body>
 </html>
