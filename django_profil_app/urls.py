@@ -3,23 +3,13 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path('', views.login),
     path("accounts/", include("django.contrib.auth.urls")),
     path('admin/', admin.site.urls),
-    path('', views.login),
     path('login/', views.login),
     path('register/', views.register),
     path('profil/', include('profil.urls')),
-<<<<<<< HEAD
-=======
-=======
     path('home/', views.home),
-<<<<<<< HEAD
-    path('register/', views.register),
     path('logout/', views.logout)
-=======
-    path('register/', views.register)
->>>>>>> 723ed3f0605fa4114e409671c8a8c964c0b6cee6
->>>>>>> 6349c26762b445ec80c58068a1e137de2e9a4235
->>>>>>> 11957b8d193cee5c8326f315e7003550b589d439
 ]
 
