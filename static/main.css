@@ -150,6 +150,11 @@ input[type=submit] {
     border: 0 none;
     cursor: pointer;
     border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+input[type=submit]:hover{
+    padding: 7px 26px;    
 }
 
 .register {
