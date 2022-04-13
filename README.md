@@ -13,6 +13,7 @@ cd django_profil_app
 pip install -r requirements.txt
 python3 manage.py runserver 0.0.0.0:8000
 ```
+<h1>Le projet</h1> 
 
 <h2>Image du projet</h2>
 
