@@ -70,3 +70,13 @@ python3 manage.py runserver 0.0.0.0:8000
 </html>
 ```
 
+<p>typed.js</p>
+
+```js
+var typed = new Typed('.element', {
+  strings: ['BIENVENUE SUR PROFIL',"L'APPLICATION DE GESTION DE PROFIL"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true
+});
+```
