@@ -7,13 +7,15 @@ def login(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
-            #log in user
+            username = request.POST.get('username', '')
             user = form.get_user()
-            if user == 'admin':
+            if username == 'admin':
             #login(request, user)
                 return redirect('../profil')
-            else:
+            elif username != 'admin':
                 return redirect('../profil/select')
+            else:
+                return redirect('/login')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
