@@ -7,8 +7,17 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.login),
     path('login/', views.login),
+<<<<<<< HEAD
+    path('register/', views.register),
+    path('profil/', include('profil.urls')),
+=======
     path('home/', views.home),
+<<<<<<< HEAD
     path('register/', views.register),
     path('logout/', views.logout)
+=======
+    path('register/', views.register)
+>>>>>>> 723ed3f0605fa4114e409671c8a8c964c0b6cee6
+>>>>>>> 6349c26762b445ec80c58068a1e137de2e9a4235
 ]
 
