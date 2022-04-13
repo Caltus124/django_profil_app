@@ -31,7 +31,7 @@ class Student(models.Model):
     student_notes = models.ManyToManyField(Notes)
     student_classes = models.ManyToManyField(Classes)
     student_average = models.ForeignKey(Average, on_delete=models.CASCADE)
-    student_image = models.ImageField()
+    student_image = models.ImageField(null=True, blank=True, upload_to='../img')
 
     def __str__(self) :
         return "{} {}, promotion {}, notes : {}, cours : {}, moyenne {}".format(self.student_firstname, self.student_lastname, self.student_promotion, self.student_notes, self.student_classes, self.student_average)
