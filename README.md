@@ -29,6 +29,10 @@ python3 manage.py runserver 0.0.0.0:8000
 
 ![alt text](https://github.com/Caltus124/django_profil_app/blob/master/img/404.png)
 
+<p>profil.html</p>
+
+![alt text](https://github.com/Caltus124/django_profil_app/blob/master/img/profil.png)
+
 <h2>Code projet</h2>
 
 <p>login.html</p>
