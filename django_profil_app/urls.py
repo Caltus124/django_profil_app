@@ -8,7 +8,8 @@ urlpatterns = [
     path('', views.home),
     path('home/', views.home),
     path('login/', views.login),
-    path('register/', views.register)
+    path('register/', views.register),
+    path('profil/', include('profil.urls')),
 ]
 
 #handler404 = "views.404.html"
