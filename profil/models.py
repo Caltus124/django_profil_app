@@ -21,7 +21,7 @@ class Classes(models.Model):
     def __str__(self):
         return self.classes_name
 
-class Images(models.Models):
+class Images(models.Model):
     pass
 
 class Student(models.Model):
