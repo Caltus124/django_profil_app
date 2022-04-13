@@ -44,3 +44,51 @@ git push
 
 ![alt text](https://github.com/Caltus124/django_profil_app/blob/master/img/login.png)
 
+<h2>Code projet</h2>
+
+<p>login.html</p>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 80px; margin-bottom: 50px;">BIENVENU SUR PROFIL</h1>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Login
+        </div>
+        {% block content %}
+        <form method="post" action="/login/">
+            <div class="input">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div><br>
+
+            <div class="clearfix"></div>
+
+            <input type="submit" value="Log In" />
+        </form>
+        {% endblock %}
+
+        <div class="privacy">
+            <a href="#">Privacy Policy</a>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
+```
