@@ -6,7 +6,8 @@ from .models import Student
 # Create your views here.
 
 def index(render):
-    return HttpResponse("Ici Futur CRUD")
+    template = loader.get_template('profil.html')
+    return HttpResponse(template.render())
 
 def select(request):
     student_list = Student.objects.order_by('student_lastname')
