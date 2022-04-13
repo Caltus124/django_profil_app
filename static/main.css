@@ -10,7 +10,6 @@ body {
 #container-login {
     background-color: #1D1F20;
     margin: auto;
-    margin-top: 100px;
     width: 340px;
     height: 445px;
     border-radius: 0.35em;
@@ -21,7 +20,6 @@ body {
 #container-register {
     background-color: #1D1F20;
     margin: auto;
-    margin-top: 100px;
     width: 340px;
     height: 480px;
     border-radius: 0.35em;

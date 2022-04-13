@@ -12,39 +12,24 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 </head>
 <body>
+    <h1 style="text-align: center; margin-top: 30px;">BIENVENU SUR PROFIL</h1>
     <div id="container-login">
         <div id="title">
             <i class="material-icons lock">lock</i> Login
         </div>
-
-        <form>
+        {% block content %}
+        <form method="post" action="/login/">
             <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">face</i>
-                </div>
-                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
-            </div>
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div><br>
 
             <div class="clearfix"></div>
 
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">vpn_key</i>
-                </div>
-                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
-            </div>
-
-            <div class="remember-me">
-                <input type="checkbox">
-                <span style="color: #DDD">Remember Me</span>
-            </div>
-
             <input type="submit" value="Log In" />
         </form>
+        {% endblock %}
 
-        <div class="forgot-password">
-            <a href="#">Forgot your password?</a>
-        </div>
         <div class="privacy">
             <a href="#">Privacy Policy</a>
         </div>
@@ -54,5 +39,8 @@
             <a href="/register"><button id="register-link">Register here</button></a>
         </div>
     </div>
+
+
+
 </body>
 </html>
