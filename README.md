@@ -38,5 +38,9 @@ git commit -m 'la description'
 ```
 git push
 ```
+<h2>Image du projet</h2>
+
+<p>login.html</p>
+
 ![alt text](https://github.com/Caltus124/django_profil_app/blob/master/img/login.png)
 
