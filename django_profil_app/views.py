@@ -27,3 +27,6 @@ def logout(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
+
+def politique(request):
+    return render(request, 'politique.html')
