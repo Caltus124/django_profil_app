@@ -1,1 +1,51 @@
-<p>PROFIL</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>profil</title>
+</head>
+<body>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+	color: #F2F2F2;
+	background-color: #303641;
+}
+
+header{
+	height: 15vh;
+	width: 100%;
+	background-color: #1D1F20;
+	display: flex;
+	align-items: center;
+}
+header a{
+	color: white;
+	border: 2px solid white;
+	padding: 10px 30px 10px 30px;
+	text-decoration: none;
+	margin-left: 50px;
+}
+</style>
+
+<header>
+	<div>
+		<a href="/login">Log out</a>		
+	</div>
+</header>
+{% if user.is_authenticated %}
+<p>{{ user }}</p>
+{% endif %}
+<h2>Your are not log in</h2>
+
+
+</body>
+</html>
