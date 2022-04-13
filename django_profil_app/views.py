@@ -10,11 +10,13 @@ def login(request):
         if form.is_valid():
             username = request.POST.get('username', '')
             user = form.get_user()
+
             if username == 'admin':
-            #login(request, user)
-                return redirect('../profil')
+                print("Connexion de l'admin !")
+                return redirect('../profil?user=' + username)
             elif username != 'admin':
-                return redirect('../profil/select')
+                print("Connexion de " + username)
+                return redirect('../profil/select?user=' + username)
             else:
                 return redirect('/login')
     else:

@@ -257,10 +257,12 @@
 
 
 </style>
+
 <body>
 	<header>
 		<section class="head">
-			<h1>bienvenue {nom admin}</h1>
+			{{ fname }}
+			<h1>bienvenue {{ profil }}</h1>
 			<div class="profil">
 				<div id="profil" onclick="Profil1()" class="rond-profil">
 					<p class="p">profil</p>
@@ -323,7 +325,6 @@
 			<button onclick="Ajouter()">fermer</button>
 		</section>
 	</main>
-
 </body>
 
 <script type="text/javascript">
