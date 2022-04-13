@@ -14,30 +14,6 @@ pip install -r requirements.txt
 python3 manage.py runserver 0.0.0.0:8000
 ```
 
-<h2>Commandes Git HUB pour les développeurs:</h2>
-
--Faire la mise à jour
-
-```
-git pull
-```
-
-Voir le status de git
-```
-git status
-```
--Ajouter une modification dans .git
-```
-git add .
-```
--Ajouter une description
-```
-git commit -m 'la description'
-```
--Ajouter a github
-```
-git push
-```
 <h2>Image du projet</h2>
 
 <p>login.html</p>
@@ -92,3 +68,4 @@ git push
 </body>
 </html>
 ```
+
