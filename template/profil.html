@@ -324,7 +324,7 @@ form button{
 				{% if student_list %}
 					{% for student in student_list %}
 						<div class="person">
-							<div class="photo">photo<img hrerf="../img/{{student_image}}"></div>
+							<div class="photo">photo<img src="{{request.student.student_image.url}}"></div>
 							<div class="name">
 								<p>{{student.student_lastname}} </p>
 							<p>{{Student.student_firstname}}</p>
@@ -351,7 +351,9 @@ form button{
 		<section id="ajout" class="contain-profil">
 			<button onclick="Ajouter()">fermer</button>
 			<h1>Ajout d'un élève</h1>
-            <form method="POST"> 
+            <form method="POST" action="" enctype="multipart/form-data"> 
+				{% csrf_token %}
+				{{form.as_p}}
                 <div>
                     <label for="nom">Nom de l'étudiant</label>
                     <input type="text" name="student-lastname" id="nom" value="{{ student.student_lastname }}">
