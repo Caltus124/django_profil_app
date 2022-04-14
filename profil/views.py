@@ -5,17 +5,14 @@ from django.template import loader
 from .models import Student
 # Create your views here.
 
-def index(render):
-    template = loader.get_template('profil.html')
-    return HttpResponse(template.render())
-
-def select(request):
+def index(request):
     student_list = Student.objects.order_by('student_lastname')
-    template = loader.get_template('../template/select.html')
+    template = loader.get_template('profil.html')
     context = {
         'student_list': student_list,
     }
     return HttpResponse(template.render(context, request))
+
 
 def detail(request, student_id):
     this_student = Student.objects.get(pk=student_id)
