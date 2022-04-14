@@ -4,7 +4,6 @@ from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate
 import os
 import socket
-socket.gethostbyname(socket.gethostname())
 
 def login(request):
     hname = os.uname()
@@ -13,10 +12,10 @@ def login(request):
         if form.is_valid():
             username = request.POST.get('username', '')
             user = form.get_user()
-
+            request.session[0] = username
             if username == 'admin':
                 print(socket.gethostbyname(socket.gethostname()) + " Connexion de l'admin ! avec : " + str(hname))
-                return redirect('../profil?user=' + username)
+                return redirect('../profil?user=' + username, user=username)
             elif username != 'admin':
                 print("Connexion de " + username + " avec : " + str(hname))
                 return redirect('../profil/select?user=' + username)
