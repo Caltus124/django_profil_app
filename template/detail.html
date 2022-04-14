@@ -8,8 +8,8 @@
 </head>
 <body>
     <p>Details panel</p>
-    {% if this_student %}
-        {% for student in this_student %}
+    {% if student_info %}
+        {% for student in student_info %}
             <p>{{ student.student_lastname }}</l>
             <p>{{ student.student_firstname }}</p>
             <p>{{ student.student_promotion }}</p>
@@ -19,7 +19,7 @@
             <p>{{ student.student_image }}</p>
         {% endfor %}
     {% else %}
-        <p>Ya R!</p>
+        <p>Il n'y a aucune information concernant cet étudiant ! </p>
     {% endif %}
 </body>
 </html>

@@ -254,8 +254,34 @@
 		opacity: 1;
 	}
 
+	.contain-profil form{
+			color: black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		.contain-profil button{
+			float: right;
+		}
+	
+		.contain-profil h1{
+			text-align: center;
+			color: black;
+		}
+	form button{
+			position: absolute;
+			left: 50%;
+			top: 30%;
+			transform: translateX(-50%);
+		}
 
 </style>
+
+
+
+
+
 
 <body>
 	<header>
@@ -311,7 +337,7 @@
 						</div>
 						<div class="crud">
 							<div>
-								<a href="/{{ student.id }}">Voir</a>
+								<a href="{{student_id}}">Voir</a>
 								<div class="trait"></div>
 							</div>
 							<div>
@@ -329,6 +355,30 @@
 
 		<section id="ajout" class="contain-profil">
 			<button onclick="Ajouter()">fermer</button>
+			<h1>Ajout d'un élève</h1>
+            <form action="{% url 'profil:select' %}" method="POST">
+                <div>
+                    <label for="nom">Nom de l'étudiant</label>
+                    <input type="text" name="student-lastname" id="nom" value="{{student.student_lastname}}">
+                </div>
+                <div>
+                    <label for="prenom">Prénom de l'étudiant</label>
+                    <input type="text" name="student-firstname" id="prenom" value="{{student.student_firstname}}">
+                </div>
+                <div>
+                    <label for="promo">Promotion de l'étudiant</label>
+                    <input type="text" name="student-promotion" id="promo" value="{{student.student_promotion}}">
+                </div>
+                <div>
+                    <label for="classes">Classes de l'étudiant</label>
+                    <input type="text" name="student-classes" id="classes" value="{{student.student_classes}}">
+                </div>
+                <div>
+                    <label for="image">Image de l'étudiant</label>
+                    <input type="file" name="student_image" id="image" value="{{student.student_image}}">
+                </div>
+                <button>Ajouter</button>
+            </form>
 		</section>
 	</main>
 </body>

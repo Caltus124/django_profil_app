@@ -4,22 +4,22 @@ from django.db import models
 
 # Create your models here.
 class Promotion(models.Model):
-    promotion_name = models.CharField(max_length=200)
+    promotion_name = models.CharField(max_length=200, null=True, blank=True)
     def __str__(self):
         return self.promotion_name
 
 class Notes(models.Model):
-    notes_value = models.FloatField(max_length=4)
+    notes_value = models.FloatField(max_length=4, null=True, blank=True) 
     def __str__(self):
         return str(self.notes_value)
 
 class Average(models.Model):
-    average_value = models.FloatField(max_length=4)
+    average_value = models.FloatField(max_length=4, null=True, blank=True)
     def __str__(self):
         return str(self.average_value)
 
 class Classes(models.Model):
-    classes_name = models.CharField(max_length=200)
+    classes_name = models.CharField(max_length=200, null=True, blank=True)
     def __str__(self):
         return self.classes_name
 

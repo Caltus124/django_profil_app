@@ -6,7 +6,6 @@ import os
 import socket
 
 def login(request):
-    hname = os.uname()
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -14,10 +13,10 @@ def login(request):
             user = form.get_user()
             request.session[0] = username
             if username == 'admin':
-                print(socket.gethostbyname(socket.gethostname()) + " Connexion de l'admin ! avec : " + str(hname))
+                print(socket.gethostbyname(socket.gethostname()) + " Connexion de l'admin ! avec : ")
                 return redirect('../profil?user=' + username, user=username)
             elif username != 'admin':
-                print("Connexion de " + username + " avec : " + str(hname))
+                print("Connexion de " + username + " avec : ")
                 return redirect('../profil/select?user=' + username)
             else:
                 return redirect('/login')
