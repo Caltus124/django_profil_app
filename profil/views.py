@@ -23,6 +23,11 @@ def detail(request, student_id):
     context = {
         'firstname': this_student.student_firstname,
         'lastname': this_student.student_lastname,
+        'promotion': this_student.student_promotion,
+        'notes': this_student.student_notes,
+        'classes': this_student.student_classes,
+        'average': this_student.student_average,
+        'image': this_student.student_image,
     }
     return HttpResponse(template.render(context, request))
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <p>Details panel</p>
+    {% if this_student %}
+        {% for student in this_student %}
+            <p>{{ student.student_lastname }}</l>
+            <p>{{ student.student_firstname }}</p>
+            <p>{{ student.student_promotion }}</p>
+            <p>{{ student.student_notes }}</p>
+            <p>{{ student.student_classes }}</p>
+            <p>{{ student.student_average }}</p>
+            <p>{{ student.student_image }}</p>
+        {% endfor %}
+    {% else %}
+        <p>Ya R!</p>
+    {% endif %}
+</body>
+</html>

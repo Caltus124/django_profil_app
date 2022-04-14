@@ -42,12 +42,13 @@ header a{
         <a href="/login">Log out</a>    
     </div>
 </header>
-<p>Student panel</p>
+</body>
+    <p>Student panel</p>
     {% if student_list %}
         <ul>
         {% for Student in student_list %}
-            <img hrerf="../img/404.png">
-            <li><a href="../profil/{{ student.id }}/">{{ Student.student_lastname }}</a></li>
+            <img hrerf="../img/{{student_image}}">
+            <li><a href="{% url 'detail' student_id %}">{{Student.student_firstname}} {{ Student.student_lastname }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
