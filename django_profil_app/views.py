@@ -11,15 +11,8 @@ def login(request):
         if form.is_valid():
             username = request.POST.get('username', '')
             user = form.get_user()
-            request.session[0] = username
-            if username == 'admin':
-                print(socket.gethostbyname(socket.gethostname()) + " Connexion de l'admin ! avec : ")
-                return redirect('../profil?user=' + username, user=username)
-            elif username != 'admin':
-                print("Connexion de " + username + " avec : ")
-                return redirect('../profil/select?user=' + username)
-            else:
-                return redirect('/login')
+            print("Connexion de "+username )
+            return render(request, 'profil.html', {'user': username})
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})

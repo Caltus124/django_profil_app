@@ -9,17 +9,15 @@
 <body>
     <p>Details panel</p>
     {% if student_info %}
-        {% for student in student_info %}
-            <p>{{ student.student_lastname }}</l>
-            <p>{{ student.student_firstname }}</p>
-            <p>{{ student.student_promotion }}</p>
-            <p>{{ student.student_notes }}</p>
-            <p>{{ student.student_classes }}</p>
-            <p>{{ student.student_average }}</p>
-            <p>{{ student.student_image }}</p>
-        {% endfor %}
+            <p>{{ student_info.student_lastname }}</l>
+            <p>{{ student_info.student_firstname }}</p>
+            <p>{{ student_info.student_promotion }}</p>
+            <p>{{ student_info.student_notes }}</p>
+            <p>{{ student_info.student_classes }}</p>
+            <p>{{ student_info.student_average }}</p>
+            <p>{{ student_info.student_image }}</p>
     {% else %}
-        <p>Il n'y a aucune information concernant cet étudiant ! </p>
+        <p>Ya R!</p>
     {% endif %}
 </body>
 </html>

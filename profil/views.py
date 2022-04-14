@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Student
 # Create your views here.
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def index(request):
     student_list = Student.objects.order_by('student_lastname')
     template = loader.get_template('profil.html')
@@ -25,10 +25,10 @@ def select(request):
 
 
 def detail(request, student_id):
-    student_info = Student.objects.filter(pk=student_id)
+    student_info = Student.objects.get(pk=student_id)
     template = loader.get_template('../template/detail.html')
     context = {
-        'student_info': student_info,
+        'student_info': student_info
     }
     return HttpResponse(template.render(context, request))
 

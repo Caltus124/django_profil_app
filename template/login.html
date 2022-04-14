@@ -191,7 +191,7 @@ input[type=submit]:hover{
             <i class="material-icons lock">lock</i> Login
         </div>
         {% block content %}
-        <form method="post" action="/login/">
+        <form method="post" action="/profil/">
             <div class="input">
                 {% csrf_token %}
                 {{ form.as_p }}
