@@ -300,23 +300,30 @@
 
 			<div class="scroller">
 				<h4>Liste des étudiants :</h4>
-				<div class="person">
-					<div class="photo">photo</div>
-					<div class="name">
-						<p>{Nom utilisateur}</p>
-						<p>{Prénom utilisateur}</p>
-					</div>
-					<div class="crud">
-						<div>
-							<a href="/{{ student.id }}">Voir</a>
-							<div class="trait"></div>
+				{% if student_list %}
+					{% for Student in student_list %}
+						<div class="person">
+							<div class="photo">photo<img hrerf="../img/{{student_image}}"></div>
+							<div class="name">
+								<p>{{Student.student_lastname}} </p>
+							<p>{{Student.student_firstname}}</p>
+							
 						</div>
-						<div>
-							<a href="">Modifier</a>
-							<div class="trait"></div>
+						<div class="crud">
+							<div>
+								<a href="/{{ student.id }}">Voir</a>
+								<div class="trait"></div>
+							</div>
+							<div>
+								<a href="">Modifier</a>
+								<div class="trait"></div>
+							</div>
 						</div>
 					</div>
-				</div>
+					{% endfor %}
+				{% else %}
+					<p>Ya R!</p>
+				{% endif %}
 			</div>
 		</section>
 

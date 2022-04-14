@@ -48,7 +48,7 @@ header a{
         <ul>
         {% for Student in student_list %}
             <img hrerf="../img/{{student_image}}">
-            <li><a href="{% url 'detail' student_id %}">{{Student.student_firstname}} {{ Student.student_lastname }}</a></li>
+            <li><a href="/profil/{{student.id}}">{{Student.student_firstname}} {{ Student.student_lastname }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
