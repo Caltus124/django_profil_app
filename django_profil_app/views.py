@@ -34,5 +34,3 @@ def logout(request):
 
 def politique(request):
     return render(request, 'politique.html')
-
-
