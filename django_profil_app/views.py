@@ -2,9 +2,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate
-
+import os
+import socket
+socket.gethostbyname(socket.gethostname())
 
 def login(request):
+    hname = os.uname()
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -12,10 +15,10 @@ def login(request):
             user = form.get_user()
 
             if username == 'admin':
-                print("Connexion de l'admin !")
+                print(socket.gethostbyname(socket.gethostname()) + " Connexion de l'admin ! avec : " + str(hname))
                 return redirect('../profil?user=' + username)
             elif username != 'admin':
-                print("Connexion de " + username)
+                print("Connexion de " + username + " avec : " + str(hname))
                 return redirect('../profil/select?user=' + username)
             else:
                 return redirect('/login')
