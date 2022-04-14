@@ -33,6 +33,11 @@ python3 manage.py runserver 0.0.0.0:8000
 
 ![alt text](https://github.com/Caltus124/django_profil_app/blob/master/img/profil.png)
 
+
+<p>CMD connexion user</p>
+
+![alt text](https://github.com/Caltus124/django_profil_app/blob/master/img/connexion.png)
+
 <h2>Code projet</h2>
 
 <p>login.html</p>
